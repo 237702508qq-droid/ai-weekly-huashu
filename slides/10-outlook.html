@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>P10 · 展望 · 减速共识能落地吗</title>
+<link rel="stylesheet" href="../shared/tokens.css">
+<style>
+  /* P10 结尾页：结束语是唯一主角，大字压底部红光 */
+  .end-head { margin-top: 62px; display: flex; align-items: flex-end; justify-content: space-between; }
+  .end-title { font-size: 64px; }
+  .end-note { font-family: var(--mono); font-size: 15px; letter-spacing: .22em; color: var(--ink-faint); padding-bottom: 14px; }
+
+  .checks { margin-top: 44px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 56px; }
+  .ck { border-top: 1px solid var(--hairline); padding-top: 24px; }
+  .ck .k { font-family: var(--mono); font-size: 14px; letter-spacing: .24em; }
+  .ck p { margin-top: 12px; font-size: 20.5px; line-height: 1.62; color: var(--ink-dim); }
+  .ck p b { color: var(--ink); font-weight: 700; }
+  .ck.yes .k { color: var(--cyan); }
+  .ck.no .k { color: var(--red); }
+  .ck.mid .k { color: var(--amber); }
+
+  .quote {
+    margin-top: auto; margin-bottom: 66px;
+    font-family: var(--serif); font-weight: 900; font-size: 62px; line-height: 1.5;
+    max-width: 1660px;
+  }
+  .quote .half { color: var(--amber); }
+  .quote .floor { color: var(--red); }
+  .quote-attr { margin-top: 26px; display: flex; align-items: center; gap: 20px; }
+  .quote-attr::before { content: ''; width: 46px; height: 3px; background: var(--red); }
+  .quote-attr span { font-family: var(--mono); font-size: 16px; letter-spacing: .26em; color: var(--ink-dim); }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="bg"><img src="../assets/finale.png" alt=""></div>
+
+  <div class="content">
+    <header class="masthead">
+      <div class="brand">AI <b>WEEKLY</b> BRIEF<span class="en">· 每周 AI 大事记</span></div>
+      <div>2026.09.10 — 09.16</div>
+      <div>展望 · OUTLOOK</div>
+    </header>
+
+    <div class="end-head">
+      <h1 class="sl-title end-title">减速共识，能<span class="acc-red">落地</span>吗</h1>
+      <div class="end-note">三个判断</div>
+    </div>
+
+    <div class="checks">
+      <div class="ck yes">
+        <div class="k">✓ 共识已现</div>
+        <p>三大实验室<b>首次同时</b>承认「需要减速」，都表态愿意接受<b>独立评估</b></p>
+      </div>
+      <div class="ck no">
+        <div class="k">✕ 现实骨感</div>
+        <p>没有一家真正停下来；标准机构还在讨论中；<b>中美官方 AI 对话</b>本月底启动</p>
+      </div>
+      <div class="ck mid">
+        <div class="k">◆ 底线逻辑</div>
+        <p>Amodei：民主国家可以商量减速，但「<b>保持对中国领先</b>」不容让步</p>
+      </div>
+    </div>
+
+    <div>
+      <p class="quote">这可能是 AI 发展史上第一次，<br>全行业同时踩了<span class="half">一脚半刹车</span>——<br>油门却还焊在<span class="floor">地板</span>上。</p>
+      <div class="quote-attr"><span>AI WEEKLY BRIEF · VOL.37 编辑部结语</span></div>
+    </div>
+
+    <footer class="pagefoot" style="border-bottom: none; padding-bottom: 34px;">
+      <div>下期见 · 每周五发刊</div>
+      <div class="pn"><b>10</b> / 10</div>
+    </footer>
+  </div>
+</div>
+</body>
+</html>
