@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>P01 · 封面 · AI 一周大事记</title>
+<link rel="stylesheet" href="../shared/tokens.css">
+<style>
+  /* P1 封面：全幅对撞主视觉 + 杂志封面 masthead + 速度刻度带对齐底部信息 */
+  .brandline { font-family: var(--mono); font-size: 16px; letter-spacing: .34em; color: var(--ink-dim); }
+  .brandline b { color: var(--red); letter-spacing: .34em; font-weight: 600; }
+
+  .cover-main { margin-top: 96px; }
+  .dateline {
+    display: inline-flex; align-items: center; gap: 20px;
+    font-family: var(--mono); font-size: 17px; letter-spacing: .3em; color: var(--amber);
+    border: 1px solid rgba(255,176,58,.45); border-radius: 999px; padding: 10px 26px;
+  }
+  .cover-kicker {
+    margin-top: 58px; display: flex; align-items: center; gap: 22px;
+    font-family: var(--mono); font-size: 18px; letter-spacing: .32em; color: var(--ink-dim);
+  }
+  .cover-kicker::before { content: ''; width: 56px; height: 3px; background: var(--red); }
+
+  .cover-title {
+    margin-top: 30px;
+    font-family: var(--serif); font-weight: 900;
+    font-size: 170px; line-height: 1.04; letter-spacing: .015em;
+  }
+  .cover-title .x { color: var(--red); }
+
+  .cover-sub {
+    margin-top: 34px;
+    font-family: var(--serif); font-weight: 700; font-size: 40px; color: var(--ink-dim);
+    letter-spacing: .04em;
+  }
+  .cover-sub .q { color: var(--amber); font-weight: 900; }
+
+  .cover-foot { margin-top: 64px; display: flex; align-items: center; gap: 28px; }
+  .cover-foot .rule { flex: 1; height: 1px; background: var(--hairline); }
+  .cover-foot .issue {
+    font-family: var(--mono); font-size: 16px; letter-spacing: .26em; color: var(--ink-faint);
+  }
+  .cover-foot .issue b { color: var(--ink); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="bg"><img src="../assets/cover.png" alt=""></div>
+
+  <div class="content">
+    <header class="masthead" style="border-bottom-color: var(--hairline);">
+      <div class="brand">AI <b>WEEKLY</b> BRIEF<span class="en">· 每周 AI 大事记</span></div>
+      <div>VOL.37 · 2026.09.16</div>
+      <div>TO-C EDITION</div>
+    </header>
+
+    <div class="cover-main">
+      <span class="dateline">2026.9.10 — 9.16</span>
+
+      <div class="cover-kicker">本周七个日夜，行业反复横跳</div>
+
+      <h1 class="cover-title">AI 一周<br>大事记<span class="x">.</span></h1>
+
+      <p class="cover-sub">从「<span class="q">喊刹车</span>」到「<span class="q">踩油门</span>」的七天</p>
+
+      <div class="cover-foot">
+        <div class="rule"></div>
+        <div class="issue">ISSUE <b>NO.37</b> · 三大实验室首次同步谈「减速」的一周</div>
+      </div>
+</div>
+
+    <footer class="pagefoot" style="border-top: none; color: var(--ink-dim);">
+      <div>每周五发刊 · 本期数据均已核实</div>
+      <div class="pn"><b>01</b> / 10</div>
+    </footer>
+  </div>
+</div>
+</body>
+</html>
