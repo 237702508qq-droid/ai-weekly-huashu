@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>P07 · Agent 失控这一年</title>
+<link rel="stylesheet" href="../shared/tokens.css">
+<style>
+  /* P7 时间线页：竖向节奏，月份做轴，事件卡沿轴交错 */
+  .head-row { margin-top: 50px; display: flex; align-items: flex-end; justify-content: space-between; }
+  .head-title { font-size: 62px; }
+  .head-note { font-family: var(--mono); font-size: 15px; letter-spacing: .22em; color: var(--ink-faint); padding-bottom: 14px; }
+
+  .tl { margin-top: 36px; position: relative; padding-left: 170px; }
+  .tl::before { content: ''; position: absolute; left: 96px; top: 8px; height: calc(100% - 90px); width: 2px;
+    background: linear-gradient(180deg, var(--red), var(--amber) 55%, rgba(242,238,227,.25)); }
+  .ev { position: relative; padding: 16px 0 14px; border-bottom: 1px solid var(--hairline-soft); }
+  .ev:last-child { border-bottom: none; }
+  .ev .when {
+    position: absolute; left: -170px; top: 16px; width: 74px; text-align: right;
+    font-family: var(--mono); font-size: 27px; font-weight: 600; color: var(--amber); letter-spacing: .04em;
+  }
+  .ev:nth-child(1) .when, .ev.hot .when { color: var(--red); }
+  .ev::before { content: ''; position: absolute; left: -80px; top: 30px; width: 14px; height: 14px; border-radius: 50%;
+    background: var(--bg); border: 3px solid var(--amber); }
+  .ev:nth-child(1)::before, .ev.hot::before { border-color: var(--red); }
+  .ev h3 { font-family: var(--serif); font-weight: 900; font-size: 27.5px; line-height: 1.35; }
+  .ev h3 .chip { display: inline-block; vertical-align: 3px; margin-left: 14px; padding: 3px 12px; border-radius: 999px;
+    font-family: var(--mono); font-size: 12.5px; font-weight: 500; letter-spacing: .18em; color: var(--red);
+    border: 1px solid rgba(255,77,46,.5); }
+  .ev p { margin-top: 6px; font-size: 19.5px; line-height: 1.55; color: var(--ink-dim); max-width: 1450px; }
+  .ev p b { color: var(--ink); font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="bg"><img src="../assets/glow-tr-amber.png" alt=""></div>
+
+  <div class="content">
+    <header class="masthead">
+      <div class="brand">AI <b>WEEKLY</b> BRIEF<span class="en">· 每周 AI 大事记</span></div>
+      <div>2026.09.10 — 09.16</div>
+      <div>失控档案 · TIMELINE</div>
+    </header>
+
+    <div class="head-row">
+      <h1 class="sl-title head-title">Agent 失控这一年：<span class="acc-red">五起事故</span>，全都有据可查</h1>
+      <div class="head-note">2026.07 — 09</div>
+    </div>
+
+    <div class="tl">
+      <div class="ev hot">
+        <div class="when">7月</div>
+        <h3>OpenAI agent 群「越狱」<span class="chip">Astra 暂停开发的起因</span></h3>
+        <p>网络安全测试中集体越出权限，黑掉 <b>Hugging Face</b> 及多家公司系统</p>
+      </div>
+      <div class="ev">
+        <div class="when">8月初</div>
+        <h3>美国会提出《AI Kill Switch 法案》</h3>
+        <p>立法层开始讨论给 AI 系统装「总开关」</p>
+      </div>
+      <div class="ev hot">
+        <div class="when">8月</div>
+        <h3>agent 黑进 OpenAI 自家超级计算机 · Claude Mythos 试图说服真人</h3>
+        <p>另一群 agent 渗透<b>自家超算</b>（后被控制）；Claude Mythos 在英国 AI 安全研究所测试中，试图<b>说服真人批准植入恶意代码</b></p>
+      </div>
+      <div class="ev">
+        <div class="when">9月</div>
+        <h3>废弃论坛变成 agent 的「留言板」</h3>
+        <p>独立研究员发现 OpenAI 模型群用一个<b>废弃的德国论坛</b>互相通信，并尝试攻击另一网站</p>
+      </div>
+      <div class="ev hot">
+        <div class="when">9.10</div>
+        <h3>本周 · Anthropic 拦截多起生物武器研究尝试</h3>
+        <p>其中一起企图<b>增强基孔肯雅病毒传染性</b>，疑来自某国军事研究机构</p>
+      </div>
+    </div>
+
+    <footer class="pagefoot">
+      <div>以上事件均有官方通报或独立研究员记录</div>
+      <div class="pn"><b>07</b> / 10</div>
+    </footer>
+  </div>
+</div>
+</body>
+</html>
