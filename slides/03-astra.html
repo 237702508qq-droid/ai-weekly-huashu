@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>P03 · Astra 发布 · GPT-6 全量推进</title>
+<link rel="stylesheet" href="../shared/tokens.css">
+<style>
+  /* P3 头条数据页：59.3% 是唯一主角；红条 = 风险等高线 */
+  .head-row { margin-top: 56px; display: flex; align-items: flex-end; justify-content: space-between; gap: 60px; }
+  .head-title { font-size: 52px; max-width: 1250px; }
+  .head-note { font-family: var(--mono); font-size: 15px; letter-spacing: .22em; color: var(--ink-faint); padding-bottom: 14px; white-space: nowrap; }
+  .head-note b { color: var(--red); }
+
+  .hero-band { margin-top: 44px; display: flex; align-items: flex-end; gap: 70px; }
+  .hero-num {
+    font-family: var(--mono); font-weight: 600; font-size: 230px; line-height: .82;
+    letter-spacing: -0.045em; color: var(--red);
+  }
+  .hero-side { padding-bottom: 10px; }
+  .hero-side .lbl { font-family: var(--mono); font-size: 17px; letter-spacing: .3em; color: var(--ink-dim); }
+  .hero-side .cap { margin-top: 14px; font-size: 24px; line-height: 1.6; color: var(--ink-dim); max-width: 660px; }
+  .hero-side .cap b { color: var(--ink); font-weight: 700; }
+
+  .ranks { margin-top: 48px; }
+  .rank-row { display: grid; grid-template-columns: 460px 1fr 170px; align-items: center; gap: 30px; border-top: 1px solid var(--hairline); padding: 21px 0; }
+  .rank-row:last-child { border-bottom: 1px solid var(--hairline); }
+  .rk-name { font-size: 25px; font-weight: 700; }
+  .rk-name small { display: block; margin-top: 6px; font-family: var(--mono); font-size: 14px; font-weight: 400; letter-spacing: .18em; color: var(--ink-faint); }
+  .rk-lane { height: 14px; background: rgba(242,238,227,.07); border-radius: 7px; overflow: hidden; }
+  .rk-fill { height: 100%; border-radius: 7px; }
+  .rk-val { text-align: right; font-family: var(--mono); font-size: 44px; font-weight: 600; letter-spacing: -0.02em; }
+
+  .facts { margin-top: 40px; border-top: 1px solid var(--hairline); padding-top: 30px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; }
+  .fact .fk { font-family: var(--mono); font-size: 14px; letter-spacing: .22em; color: var(--red); }
+  .fact .fk.g { color: var(--ink-faint); }
+  .fact p { margin-top: 12px; font-size: 20.5px; line-height: 1.6; color: var(--ink-dim); }
+  .fact p b { color: var(--ink); font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="bg"><img src="../assets/glow-br-red.png" alt=""></div>
+
+  <div class="content">
+    <header class="masthead">
+      <div class="brand">AI <b>WEEKLY</b> BRIEF<span class="en">· 每周 AI 大事记</span></div>
+      <div>2026.09.10 — 09.16</div>
+      <div>头条 · 头号旗舰</div>
+    </header>
+
+    <div class="head-row">
+      <h1 class="sl-title head-title">GPT-6 Astra 正式发布：最强，也<span class="acc-red">最危险</span></h1>
+      <div class="head-note">9.3 首发 · <b>9.16 全量推进</b></div>
+    </div>
+
+    <div class="hero-band">
+      <div class="hero-num">59.3<span style="font-size:130px;">%</span></div>
+      <div class="hero-side">
+        <div class="lbl">AGENT'S LAST EXAM</div>
+        <p class="cap">衡量「AI 能否胜任人类专业工作」的考试。Astra 拿下 <b>59.3%</b>，官方口径称其为迄今最对齐（aligned）的模型，编码能力是「迄今最佳软件工程模型」。</p>
+      </div>
+    </div>
+
+    <div class="ranks">
+      <div class="rank-row">
+        <div class="rk-name" style="color:var(--red);">GPT-6 Astra<small>OPENAI · 本次发布</small></div>
+        <div class="rk-lane"><div class="rk-fill" style="width:59.3%; background:var(--red);"></div></div>
+        <div class="rk-val" style="color:var(--red);">59.3</div>
+      </div>
+      <div class="rank-row">
+        <div class="rk-name">Claude Opus 5<small>ANTHROPIC</small></div>
+        <div class="rk-lane"><div class="rk-fill" style="width:52.7%; background:var(--ink-dim);"></div></div>
+        <div class="rk-val" style="color:var(--ink-dim);">52.7</div>
+      </div>
+      <div class="rank-row">
+        <div class="rk-name">Anthropic Fable 5<small>ANTHROPIC</small></div>
+        <div class="rk-lane"><div class="rk-fill" style="width:48.7%; background:rgba(242,238,227,.35);"></div></div>
+        <div class="rk-val" style="color:var(--ink-faint);">48.7</div>
+      </div>
+    </div>
+
+    <div class="facts">
+      <div class="fact">
+        <div class="fk">RISK · 风险等级</div>
+        <p>OpenAI 史上首个被内部评级为 <b>「Critical」网络安全风险</b>的模型；官方承认测试中发现未知漏洞并制成完整利用链</p>
+      </div>
+      <div class="fact">
+        <div class="fk g">HISTORY · 前科</div>
+        <p>7 月因 <b>Hugging Face 事件</b>暂停开发过一次</p>
+      </div>
+      <div class="fact">
+        <div class="fk g">ROLLOUT · 推送节奏</div>
+        <p>首发仅限 <b>Daybreak 网络安全计划</b>企业客户，未来几天推向所有付费用户和 API</p>
+      </div>
+    </div>
+
+    <footer class="pagefoot">
+      <div>风险分级管控 · Daybreak / Glasswing 模式</div>
+      <div class="pn"><b>03</b> / 10</div>
+    </footer>
+  </div>
+</div>
+</body>
+</html>
