@@ -1,0 +1,84 @@
+/* ═══════════════════════════════════════════════════════════
+   AI WEEKLY BRIEF · 暗色科技 × 电子杂志 · shared tokens
+   底色暖黑；衬线 900 大标题；警示橙红 = 减速/风险，琥珀 = 加速/资金，青 = 流动/机会
+   ═══════════════════════════════════════════════════════════ */
+:root {
+  --bg: #0B0B0D;
+  --ink: #F2EEE3;
+  --ink-dim: #B9B3A6;
+  --ink-faint: #8A8478;
+  --red: #FF4D2E;
+  --amber: #FFB03A;
+  --cyan: #52E0C4;
+  --hairline: rgba(242, 238, 227, .18);
+  --hairline-soft: rgba(242, 238, 227, .09);
+  --serif: 'Noto Serif CJK SC', 'Noto Serif SC', serif;
+  --sans: 'Noto Sans CJK SC', 'Noto Sans SC', -apple-system, sans-serif;
+  --mono: 'DejaVu Sans Mono', 'Noto Sans CJK SC', ui-monospace, monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1920px; height: 1080px; overflow: hidden; background: var(--bg); }
+
+.slide {
+  position: relative;
+  width: 1920px; height: 1080px;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── 背景层：全幅配图 + 暗角压光（保证文字对比度） ── */
+.bg { position: absolute; inset: 0; z-index: 0; }
+.bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(125% 95% at 50% 42%, rgba(0,0,0,0) 52%, rgba(4,4,6,.62) 100%);
+}
+
+/* ── 内容层 ── */
+.content { position: relative; z-index: 2; height: 100%; padding: 0 110px; display: flex; flex-direction: column; }
+
+/* ── 页眉 masthead（编辑部 chrome） ── */
+.masthead {
+  display: flex; align-items: baseline; justify-content: space-between;
+  padding: 42px 0 16px;
+  border-bottom: 1px solid var(--hairline);
+  font-family: var(--mono); font-size: 15px; letter-spacing: .2em;
+  color: var(--ink-faint);
+}
+.masthead .brand { color: var(--ink-dim); }
+.masthead .brand b { color: var(--ink); font-weight: 600; }
+.masthead .brand .en { color: var(--red); margin-left: 16px; letter-spacing: .26em; }
+
+/* ── 页脚 folio ── */
+.pagefoot {
+  margin-top: auto;
+  display: flex; align-items: center; justify-content: space-between;
+  border-top: 1px solid var(--hairline);
+  padding: 15px 0 30px;
+  font-family: var(--mono); font-size: 14px; letter-spacing: .2em;
+  color: var(--ink-faint);
+}
+.pagefoot .pn { color: var(--ink-dim); }
+.pagefoot .pn b { color: var(--red); font-weight: 600; }
+
+/* ── kicker：红短横 + mono 栏目签 ── */
+.kicker {
+  display: flex; align-items: center; gap: 18px;
+  font-family: var(--mono); font-size: 16px; font-weight: 500;
+  letter-spacing: .3em; color: var(--red);
+}
+.kicker::before { content: ''; width: 46px; height: 3px; background: var(--red); flex: none; }
+.kicker.amber { color: var(--amber); }
+.kicker.amber::before { background: var(--amber); }
+
+h1.sl-title { font-family: var(--serif); font-weight: 900; line-height: 1.16; letter-spacing: .01em; }
+.sl-sub { font-family: var(--serif); font-weight: 700; color: var(--ink-dim); }
+.mono { font-family: var(--mono); }
+.acc-red { color: var(--red); }
+.acc-amber { color: var(--amber); }
+.acc-cyan { color: var(--cyan); }
