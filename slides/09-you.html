@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>P09 · 对你我意味着什么</title>
+<link rel="stylesheet" href="../shared/tokens.css">
+<style>
+  /* P9 to-C 指南页：四个「与你有关」的格子，青色 = 机会感 */
+  .head-row { margin-top: 50px; display: flex; align-items: flex-end; justify-content: space-between; }
+  .head-title { font-size: 62px; }
+  .head-note { font-family: var(--mono); font-size: 15px; letter-spacing: .22em; color: var(--ink-faint); padding-bottom: 14px; }
+
+  .cards { margin-top: 40px; flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 26px; margin-bottom: 46px; }
+  .card { border: 1px solid var(--hairline-soft); background: rgba(11,11,13,.55); padding: 34px 40px; display: flex; flex-direction: column; }
+  .card .tag { display: flex; align-items: baseline; gap: 16px; }
+  .card .no { font-family: var(--mono); font-size: 19px; font-weight: 600; color: var(--cyan); letter-spacing: .1em; }
+  .card .ct { font-family: var(--serif); font-weight: 900; font-size: 34px; }
+  .card p { margin-top: 14px; font-size: 21px; line-height: 1.68; color: var(--ink-dim); }
+  .card p b { color: var(--ink); font-weight: 700; }
+  .card p .hl { color: var(--cyan); font-weight: 700; }
+  .card p .wa { color: var(--red); font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="bg"><img src="../assets/glow-tl-cyan.png" alt=""></div>
+
+  <div class="content">
+    <header class="masthead">
+      <div class="brand">AI <b>WEEKLY</b> BRIEF<span class="en">· 每周 AI 大事记</span></div>
+      <div>2026.09.10 — 09.16</div>
+      <div>与你有关 · TO-C 指南</div>
+    </header>
+
+    <div class="head-row">
+      <h1 class="sl-title head-title">这一周的大新闻，<span class="acc-cyan">和你有什么关系</span></h1>
+      <div class="head-note">四件值得做的事</div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="tag"><span class="no">01</span><span class="ct">订阅要重估了</span></div>
+        <p>Astra 正在全量推送，<b>200 美元档</b>的价值正在重估；另外记个日子：<b>GPT-5.5 系列 10 月 14 日退役</b>，别到时措手不及。</p>
+      </div>
+      <div class="card">
+        <div class="tag"><span class="no">02</span><span class="ct">怎么选，看你要什么</span></div>
+        <p>写代码、跑 Agent 任务 → <b>Astra 或 Opus 5.2</b>；要性价比 → <b>GPT-6 Sol</b>（灰度中）；中文生态 → <span class="hl">国产模型在加速追赶</span>。</p>
+      </div>
+      <div class="card">
+        <div class="tag"><span class="no">03</span><span class="ct">能委托的事变多了</span></div>
+        <p>AI Agent 已能胜任人类级别专业工作（考试得分 <span class="hl">59.3%</span>）——普通人<b>可以放心委托的任务范围</b>，这一周又被拉大了一截。</p>
+      </div>
+      <div class="card">
+        <div class="tag"><span class="no">04</span><span class="ct">越强的模型越像双刃剑</span></div>
+        <p>网络安全能力既能防御也能攻击；官方对高危能力做了<span class="wa">分级管控</span>（Daybreak / Glasswing 模式）——用得放心，但别全信。</p>
+      </div>
+    </div>
+
+    <footer class="pagefoot">
+      <div>选择建议基于本周公开测试与定价信息</div>
+      <div class="pn"><b>09</b> / 10</div>
+    </footer>
+  </div>
+</div>
+</body>
+</html>
