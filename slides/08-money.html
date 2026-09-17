@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>P08 · 钱和人才都在流动</title>
+<link rel="stylesheet" href="../shared/tokens.css">
+<style>
+  /* P8 数据页：估值大字 + 收入增速 + 人才/基建两栏 */
+  .head-row { margin-top: 50px; display: flex; align-items: flex-end; justify-content: space-between; }
+  .head-title { font-size: 62px; }
+  .head-note { font-family: var(--mono); font-size: 15px; letter-spacing: .22em; color: var(--ink-faint); padding-bottom: 14px; }
+
+  .hero { margin-top: 38px; display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: end; }
+  .val .lbl { font-family: var(--mono); font-size: 15px; letter-spacing: .26em; color: var(--ink-faint); }
+  .val .row { margin-top: 12px; display: flex; align-items: baseline; gap: 26px; flex-wrap: wrap; }
+  .val .num { font-family: var(--mono); font-weight: 600; font-size: 130px; line-height: .9; letter-spacing: -0.045em; color: var(--amber); }
+  .val .num small { font-size: 30px; letter-spacing: .04em; color: var(--ink-dim); margin-left: 6px; }
+  .val .delta { font-family: var(--mono); font-size: 20px; color: var(--cyan); letter-spacing: .08em; }
+
+  .rev { border-left: 1px solid var(--hairline); padding-left: 70px; }
+  .rev .num { color: var(--red); font-size: 130px; }
+  .rev .delta { color: var(--ink-dim); }
+
+  .grid2 { margin-top: 48px; border-top: 1px solid var(--hairline); padding-top: 34px; display: grid; grid-template-columns: 1.35fr 1fr; gap: 80px; }
+  .sec .t { display: flex; align-items: center; gap: 18px; font-family: var(--mono); font-size: 15px; letter-spacing: .26em; color: var(--red); }
+  .sec .t::after { content: ''; flex: 1; height: 1px; background: var(--hairline); }
+
+  .move { margin-top: 24px; display: flex; flex-direction: column; gap: 18px; }
+  .mv { display: grid; grid-template-columns: 1.05fr 44px 0.95fr; align-items: center; gap: 20px; }
+  .mv .who { font-weight: 700; font-size: 21.5px; white-space: nowrap; }
+  .mv .who small { display: block; font-family: var(--mono); font-weight: 400; font-size: 13.5px; letter-spacing: .14em; color: var(--ink-faint); margin-top: 4px; white-space: normal; }
+  .mv .arr { color: var(--amber); font-size: 24px; text-align: center; }
+  .mv .to { font-size: 19.5px; color: var(--ink-dim); }
+  .mv .to b { color: var(--ink); font-weight: 700; }
+
+  .infra { margin-top: 24px; display: flex; flex-direction: column; gap: 16px; }
+  .if { border: 1px solid var(--hairline-soft); padding: 18px 26px; display: flex; align-items: center; gap: 22px; background: rgba(11,11,13,.5); }
+  .if .gw { font-family: var(--mono); font-size: 34px; font-weight: 600; color: var(--amber); white-space: nowrap; }
+  .if p { font-size: 19px; line-height: 1.5; color: var(--ink-dim); }
+  .if p b { color: var(--ink); font-weight: 700; }
+  .if .logo-slot { display: flex; align-items: center; flex: none; }
+
+  .foot-note { margin-top: auto; margin-bottom: 50px; padding-top: 24px; border-top: 1px solid var(--hairline);
+    font-size: 19px; color: var(--ink-dim); line-height: 1.6; }
+  .foot-note b { color: var(--ink); font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="bg"><img src="../assets/glow-tr-amber.png" alt=""></div>
+
+  <div class="content">
+    <header class="masthead">
+      <div class="brand">AI <b>WEEKLY</b> BRIEF<span class="en">· 每周 AI 大事记</span></div>
+      <div>2026.09.10 — 09.16</div>
+      <div>资本 · 人才 · 基建</div>
+    </header>
+
+    <div class="head-row">
+      <h1 class="sl-title head-title">钱和人才，都在流向<span class="acc-amber">同一个方向</span></h1>
+      <div class="head-note">估值首次换座</div>
+    </div>
+
+    <div class="hero">
+      <div class="val">
+        <div class="lbl">ANTHROPIC 估值 · SERIES H 融资 650 亿美元后</div>
+        <div class="row"><div class="num">9650<small>亿美元</small></div><div class="delta">▲ 首次超过 OpenAI（8520 亿）</div></div>
+      </div>
+      <div class="val rev">
+        <div class="lbl">ANTHROPIC 年化收入 · 4 个月</div>
+        <div class="row"><div class="num">470<small>亿美元</small></div><div class="delta">4 月 300 亿 → 4 个月 +57%</div></div>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="sec">
+        <div class="t">TALENT · 人才流动</div>
+        <div class="move">
+          <div class="mv">
+            <div class="who">John Jumper<small>DEEPMIND 总监 · 诺奖得主</small></div><div class="arr">→</div><div class="to">转投 <b>Anthropic</b></div>
+          </div>
+          <div class="mv">
+            <div class="who">Jonas Adler · Alexander Fritzel<small>GEMINI 核心研究员</small></div><div class="arr">→</div><div class="to">转投 <b>Anthropic</b></div>
+          </div>
+          <div class="mv">
+            <div class="who">Noam Shazeer<small> Character.AI 创始人</small></div><div class="arr">→</div><div class="to">转投 <b>OpenAI</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="sec">
+        <div class="t">INFRA · 基建锁定</div>
+        <div class="infra">
+          <div class="if">
+            <span class="logo-slot"><svg width="52" height="31" viewBox="0 0 304 182" fill="#F2EEE3" fill-rule="evenodd"><path d="m86 66 2 9c0 3 1 5 3 8v2l-1 3-7 4-2 1-3-1-4-5-3-6c-8 9-18 14-29 14-9 0-16-3-20-8-5-4-8-11-8-19s3-15 9-20c6-6 14-8 25-8a79 79 0 0 1 22 3v-7c0-8-2-13-5-16-3-4-8-5-16-5l-11 1a80 80 0 0 0-14 5h-2c-1 0-2-1-2-3v-5l1-3c0-1 1-2 3-2l12-5 16-2c12 0 20 3 26 8 5 6 8 14 8 25v32zM46 82l10-2c4-1 7-4 10-7l3-6 1-9v-4a84 84 0 0 0-19-2c-6 0-11 1-15 4-3 2-4 6-4 11s1 8 3 11c3 2 6 4 11 4zm80 10-4-1-2-3-23-78-1-4 2-2h10l4 1 2 4 17 66 15-66 2-4 4-1h8l4 1 2 4 16 67 17-67 2-4 4-1h9c2 0 3 1 3 2v2l-1 2-24 78-2 4-4 1h-9l-4-1-1-4-16-65-15 64-2 4-4 1h-9zm129 3a66 66 0 0 1-27-6l-3-3-1-2v-5c0-2 1-3 2-3h2l3 1a54 54 0 0 0 23 5c6 0 11-2 14-4 4-2 5-5 5-9l-2-7-10-5-15-5c-7-2-13-6-16-10a24 24 0 0 1 5-34l10-5a44 44 0 0 1 20-2 110 110 0 0 1 12 3l4 2 3 2 1 4v4c0 3-1 4-2 4l-4-2c-6-2-12-3-19-3-6 0-11 0-14 2s-4 5-4 9c0 3 1 5 3 7s5 4 11 6l14 4c7 3 12 6 15 10s5 9 5 14l-3 12-7 8c-3 3-7 5-11 6l-14 2z"/><path d="M274 144A220 220 0 0 1 4 124c-4-3-1-6 2-4a300 300 0 0 0 263 16c5-2 10 4 5 8z"/><path d="M287 128c-4-5-28-3-38-1-4 0-4-3-1-5 19-13 50-9 53-5 4 5-1 36-18 51-3 2-6 1-5-2 5-10 13-33 9-38z"/></svg></span>
+            <div class="gw">5 GW</div><p><b>AWS 算力</b>长期锁定</p>
+          </div>
+          <div class="if">
+            <div class="gw">5 GW</div><p><b>Google / Broadcom TPU</b> 协议</p>
+          </div>
+          <div class="if">
+            <div class="gw">GPU</div><p><b>SpaceX Colossus</b> 算力接入</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-note">
+      解读：估值、收入、人才、算力四条线同时指向 Anthropic——但 OpenAI 同期拿下 <b>Noam Shazeer</b>，并在 P3 里先发了最强模型。竞争远没有结束，只是换了赛道。
+    </div>
+
+    <footer class="pagefoot">
+      <div>估值与收入数据经交叉核实 · 见 OUTLINE 来源</div>
+      <div class="pn"><b>08</b> / 10</div>
+    </footer>
+  </div>
+</div>
+</body>
+</html>
