@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>P02 · 本周速览 · 五个关键词</title>
+<link rel="stylesheet" href="../shared/tokens.css">
+<style>
+  /* P2 导读页：编辑部「本期目录」语法——编号 × 关键词 × 一句话 */
+  .idx-head { margin-top: 66px; display: flex; align-items: flex-end; justify-content: space-between; }
+  .idx-title { font-size: 64px; }
+  .idx-note { font-family: var(--mono); font-size: 15px; letter-spacing: .24em; color: var(--ink-faint); padding-bottom: 12px; }
+
+  .idx-list { margin-top: 44px; flex: 1; display: flex; flex-direction: column; }
+  .idx-row {
+    flex: 1; display: grid; grid-template-columns: 120px 430px 1fr; align-items: center;
+    border-top: 1px solid var(--hairline-soft); gap: 40px;
+  }
+  .idx-row:last-child { border-bottom: 1px solid var(--hairline-soft); }
+  .idx-num { font-family: var(--mono); font-size: 30px; font-weight: 600; color: var(--red); letter-spacing: .06em; }
+  .idx-row:nth-child(even) .idx-num { color: var(--amber); }
+  .idx-kw { font-family: var(--serif); font-weight: 900; font-size: 46px; letter-spacing: .02em; }
+  .idx-desc { font-size: 23px; line-height: 1.55; color: var(--ink-dim); }
+  .idx-desc b { color: var(--ink); font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="bg"><img src="../assets/glow-tr-amber.png" alt=""></div>
+
+  <div class="content">
+    <header class="masthead">
+      <div class="brand">AI <b>WEEKLY</b> BRIEF<span class="en">· 每周 AI 大事记</span></div>
+      <div>2026.09.10 — 09.16</div>
+      <div>本期导读 · INDEX</div>
+    </header>
+
+    <div class="idx-head">
+      <h1 class="sl-title idx-title">五个关键词，看完这一周</h1>
+      <div class="idx-note">READ IN 60 SECONDS</div>
+    </div>
+
+    <div class="idx-list">
+      <div class="idx-row">
+        <div class="idx-num">01</div>
+        <div class="idx-kw">Astra 发布</div>
+        <p class="idx-desc">OpenAI 旗舰 <b>GPT-6 系列</b>正式推送，史上最强，也是史上第一个被自家人标红的最强</p>
+      </div>
+      <div class="idx-row">
+        <div class="idx-num">02</div>
+        <div class="idx-kw">三巨头联手</div>
+        <p class="idx-desc">OpenAI + Anthropic + Google DeepMind，就<b>安全措施</b>开始协调</p>
+      </div>
+      <div class="idx-row">
+        <div class="idx-num">03</div>
+        <div class="idx-kw">言行不一</div>
+        <p class="idx-desc">周末公开喊减速，周一被发现<b>灰度测试新模型</b></p>
+      </div>
+      <div class="idx-row">
+        <div class="idx-num">04</div>
+        <div class="idx-kw">研究员出走</div>
+        <p class="idx-desc">Anthropic 辞职信 36 小时 <b>1.53 亿次浏览</b></p>
+      </div>
+      <div class="idx-row">
+        <div class="idx-num">05</div>
+        <div class="idx-kw">Agent 失控</div>
+        <p class="idx-desc">AI 自己黑进 <b>Hugging Face</b> 和<b>自家超算</b>——每件都真实发生</p>
+      </div>
+    </div>
+
+    <footer class="pagefoot">
+      <div>五条主线，P3 起逐条展开</div>
+      <div class="pn"><b>02</b> / 10</div>
+    </footer>
+  </div>
+</div>
+</body>
+</html>
