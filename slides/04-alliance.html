@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>P04 · 三巨头罕见联手谈安全</title>
+<link rel="stylesheet" href="../shared/tokens.css">
+<style>
+  /* P4 品牌页：三个真 logo 并排 + 三步计划编号带 */
+  .head-row { margin-top: 54px; display: flex; align-items: flex-end; justify-content: space-between; gap: 60px; }
+  .head-title { font-size: 62px; }
+  .head-note { font-family: var(--mono); font-size: 15px; letter-spacing: .22em; color: var(--ink-faint); padding-bottom: 14px; white-space: nowrap; }
+
+  .logo-band { margin-top: 42px; display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: stretch; }
+  .lab {
+    border: 1px solid var(--hairline-soft); border-right: none;
+    padding: 38px 44px 30px; display: flex; flex-direction: column;
+    background: rgba(11,11,13,.55);
+  }
+  .lab:last-child { border-right: 1px solid var(--hairline-soft); }
+  .lab .logo-slot { height: 64px; display: flex; align-items: center; gap: 18px; }
+  .lab .wordmark { font-family: var(--serif); font-weight: 900; font-size: 30px; letter-spacing: .04em; color: var(--ink); white-space: nowrap; }
+  .lab .wordmark small { display: block; margin-top: 4px; font-family: var(--mono); font-weight: 400; font-size: 12.5px; letter-spacing: .26em; color: var(--ink-faint); }
+  .lab .st { margin-top: 18px; font-family: var(--mono); font-size: 14px; letter-spacing: .2em; color: var(--amber); }
+  .lab p { margin-top: 10px; font-size: 19px; line-height: 1.6; color: var(--ink-dim); }
+  .lab p b { color: var(--ink); font-weight: 700; }
+
+  .plan { margin-top: 46px; }
+  .plan-title { display: flex; align-items: center; gap: 20px; font-family: var(--mono); font-size: 15px; letter-spacing: .26em; color: var(--red); }
+  .plan-title::after { content: ''; flex: 1; height: 1px; background: var(--hairline); }
+  .plan-steps { margin-top: 26px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; }
+  .step { display: grid; grid-template-columns: 56px 1fr; gap: 20px; align-items: start; }
+  .step .n { font-family: var(--mono); font-size: 40px; font-weight: 600; color: var(--red); line-height: 1; }
+  .step h3 { font-family: var(--serif); font-weight: 900; font-size: 26px; line-height: 1.35; }
+  .step p { margin-top: 8px; font-size: 19px; line-height: 1.55; color: var(--ink-dim); }
+  .step p b { color: var(--ink); font-weight: 700; }
+
+  .ctx { margin-top: auto; margin-bottom: 52px; border-top: 1px solid var(--hairline); padding-top: 28px; display: flex; align-items: baseline; gap: 40px; }
+  .ctx .big { font-family: var(--mono); font-size: 76px; font-weight: 600; color: var(--amber); letter-spacing: -0.03em; white-space: nowrap; }
+  .ctx .big small { font-size: 26px; color: var(--ink-dim); letter-spacing: .05em; margin-left: 10px; }
+  .ctx p { font-size: 21px; line-height: 1.6; color: var(--ink-dim); max-width: 900px; }
+  .ctx p b { color: var(--ink); font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="bg"><img src="../assets/glow-tl-cyan.png" alt=""></div>
+
+  <div class="content">
+    <header class="masthead">
+      <div class="brand">AI <b>WEEKLY</b> BRIEF<span class="en">· 每周 AI 大事记</span></div>
+      <div>2026.09.10 — 09.16</div>
+      <div>独家 · Bloomberg 9.15</div>
+    </header>
+
+    <div class="head-row">
+      <h1 class="sl-title head-title">三巨头罕见联手，谈的不是产品，是<span class="acc-amber">安全</span></h1>
+      <div class="head-note">协调已进行<b style="color:var(--amber);">数周</b></div>
+    </div>
+
+    <div class="logo-band">
+      <div class="lab">
+        <div class="logo-slot">
+          <svg width="46" height="46" viewBox="0 0 256 260" fill="#F2EEE3" fill-rule="evenodd"><path d="M239.184 106.203a64.716 64.716 0 0 0-5.576-53.103C219.452 28.459 191 15.784 163.213 21.74A65.586 65.586 0 0 0 52.096 45.22a64.716 64.716 0 0 0-43.23 31.36c-14.31 24.602-11.061 55.634 8.033 76.74a64.665 64.665 0 0 0 5.525 53.102c14.174 24.65 42.644 37.324 70.446 31.36a64.72 64.72 0 0 0 48.754 21.744c28.481.025 53.714-18.361 62.414-45.481a64.767 64.767 0 0 0 43.229-31.36c14.137-24.558 10.875-55.423-8.083-76.483Zm-97.56 136.338a48.397 48.397 0 0 1-31.105-11.255l1.535-.87 51.67-29.825a8.595 8.595 0 0 0 4.247-7.367v-72.85l21.845 12.636c.218.111.37.32.409.563v60.367c-.056 26.818-21.783 48.545-48.601 48.601Zm-104.466-44.61a48.345 48.345 0 0 1-5.781-32.589l1.534.921 51.722 29.826a8.339 8.339 0 0 0 8.441 0l63.181-36.425v25.221a.87.87 0 0 1-.358.665l-52.335 30.184c-23.257 13.398-52.97 5.431-66.404-17.803ZM23.549 85.38a48.499 48.499 0 0 1 25.58-21.333v61.39a8.288 8.288 0 0 0 4.195 7.316l62.874 36.272-21.845 12.636a.819.819 0 0 1-.767 0L41.353 151.53c-23.211-13.454-31.171-43.144-17.804-66.405v.256Zm179.466 41.695-63.08-36.63L161.73 77.86a.819.819 0 0 1 .768 0l52.233 30.184a48.6 48.6 0 0 1-7.316 87.635v-61.391a8.544 8.544 0 0 0-4.4-7.213Zm21.742-32.69-1.535-.922-51.619-30.081a8.39 8.39 0 0 0-8.492 0L99.98 99.808V74.587a.716.716 0 0 1 .307-.665l52.233-30.133a48.652 48.652 0 0 1 72.236 50.391v.205ZM88.061 139.097l-21.845-12.585a.87.87 0 0 1-.41-.614V65.685a48.652 48.652 0 0 1 79.757-37.346l-1.535.87-51.67 29.825a8.595 8.595 0 0 0-4.246 7.367l-.051 72.697Zm11.868-25.58 28.138-16.217 28.188 16.218v32.434l-28.086 16.218-28.188-16.218-.052-32.434Z"/></svg>
+          <div class="wordmark">OpenAI<small>ALTMAN：愿接受独立专家进驻</small></div>
+        </div>
+        <div class="st">STATUS · 喊减速 + 测新模</div>
+        <p>公开呼吁减速发展，表态愿意接受<b>独立安全专家</b>进驻</p>
+      </div>
+      <div class="lab">
+        <div class="logo-slot">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="#D4B48C" fill-rule="evenodd"><path d="M13.827 3.52h3.603L24 20h-3.603l-6.57-16.48zm-7.258 0h3.767L16.906 20h-3.674l-1.343-3.461H5.017l-1.344 3.46H0L6.57 3.522zm4.132 9.959L8.453 7.687 6.205 13.48H10.7z"/></svg>
+          <div class="wordmark">Anthropic<small>AMODEI：三步减速计划</small></div>
+        </div>
+        <div class="st">STATUS · 长文 + 联署</div>
+        <p>9.12 发布 <b>3800 字长文</b>，提出行业联合减速的三步路线</p>
+      </div>
+      <div class="lab">
+        <div class="logo-slot">
+          <span style="width:46px; flex:none;"></span>
+          <div class="wordmark" style="font-size:27px;">Google DeepMind<small>行业标准的共同推手</small></div>
+        </div>
+        <div class="st">STATUS · 协调参与方</div>
+        <p>三方就测试与审计的<b>行业标准机构</b>展开探讨</p>
+      </div>
+    </div>
+
+    <div class="plan">
+      <div class="plan-title">AMODEI 的三步减速计划 · 9.12 长文</div>
+      <div class="plan-steps">
+        <div class="step"><div class="n">①</div><div><h3>独立评估员进驻</h3><p>各前沿实验室接受外部评估员<b>常驻</b>检查</p></div></div>
+        <div class="step"><div class="n">②</div><div><h3>头部公司联合安全标准</h3><p>先在几家实验室之间<b>统一测试与审计</b>口径</p></div></div>
+        <div class="step"><div class="n">③</div><div><h3>国际合作推广</h3><p>把这套标准推广成<b>跨国机制</b></p></div></div>
+      </div>
+    </div>
+
+    <div class="ctx">
+      <div class="big">37.5<small>天</small><span style="color:var(--ink-faint); margin:0 14px;">→</span>11<small>天</small></div>
+      <p>前沿模型发布间隔，从 2023 年的 37.5 天缩短到今年的 <b>11 天</b>——这就是三巨头坐下来谈「减速」的背景：再不协调，谁也刹不住。</p>
+    </div>
+
+    <footer class="pagefoot">
+      <div>行业标准机构：协调测试与审计 · 仍在探讨中</div>
+      <div class="pn"><b>04</b> / 10</div>
+    </footer>
+  </div>
+</div>
+</body>
+</html>
