@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>P05 · 嘴上喊刹车，手上踩油门</title>
+<link rel="stylesheet" href="../shared/tokens.css">
+<style>
+  /* P5 对比页：周末 vs 工作日，左右对撞 */
+  .head-row { margin-top: 54px; display: flex; align-items: flex-end; justify-content: space-between; }
+  .head-title { font-size: 64px; }
+  .head-note { font-family: var(--mono); font-size: 15px; letter-spacing: .22em; color: var(--ink-faint); padding-bottom: 14px; }
+
+  .vs { margin-top: 42px; display: grid; grid-template-columns: 1fr 88px 1fr; align-items: stretch; }
+  .vs-col { border: 1px solid var(--hairline-soft); padding: 34px 40px; background: rgba(11,11,13,.55); display: flex; flex-direction: column; }
+  .vs-tag { font-family: var(--mono); font-size: 15px; letter-spacing: .26em; }
+  .vs-col.brake .vs-tag { color: var(--red); }
+  .vs-col.gas .vs-tag { color: var(--amber); }
+  .vs-head { margin-top: 16px; font-family: var(--serif); font-weight: 900; font-size: 40px; line-height: 1.3; }
+  .vs-col p.desc { margin-top: 14px; font-size: 21px; line-height: 1.65; color: var(--ink-dim); }
+  .vs-col p.desc b { color: var(--ink); font-weight: 700; }
+  .vs-mid { display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 30px; color: var(--ink-faint); }
+
+  .models { margin-top: 22px; border-top: 1px dashed var(--hairline); padding-top: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 34px; }
+  .model .mn { font-family: var(--mono); font-size: 24px; font-weight: 600; color: var(--amber); }
+  .model .mo { font-family: var(--mono); font-size: 21px; font-weight: 600; color: var(--cyan); margin-top: 14px; }
+  .model p { margin-top: 8px; font-size: 18.5px; line-height: 1.55; color: var(--ink-dim); }
+  .model p b { color: var(--ink); font-weight: 700; }
+
+  .money { margin-top: auto; margin-bottom: 50px; border-top: 1px solid var(--hairline); padding-top: 28px; display: grid; grid-template-columns: 460px 1fr; gap: 60px; align-items: center; }
+  .money .big { font-family: var(--mono); font-size: 84px; font-weight: 600; color: var(--red); letter-spacing: -0.04em; line-height: 1; }
+  .money .big small { font-size: 28px; color: var(--ink-dim); letter-spacing: .04em; margin-left: 8px; }
+  .money .expl { font-size: 20.5px; line-height: 1.65; color: var(--ink-dim); }
+  .money .expl b { color: var(--ink); font-weight: 700; }
+  .money .expl .chip { display: inline-block; margin: 2px 10px 2px 0; padding: 4px 14px; border: 1px solid var(--hairline); border-radius: 999px; font-family: var(--mono); font-size: 16px; color: var(--ink); white-space: nowrap; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="bg"><img src="../assets/glow-br-red.png" alt=""></div>
+
+  <div class="content">
+    <header class="masthead">
+      <div class="brand">AI <b>WEEKLY</b> BRIEF<span class="en">· 每周 AI 大事记</span></div>
+      <div>2026.09.10 — 09.16</div>
+      <div>言行不一实录</div>
+    </header>
+
+    <div class="head-row">
+      <h1 class="sl-title head-title">嘴上喊<span class="acc-red">刹车</span>，手上踩<span class="acc-amber">油门</span></h1>
+      <div class="head-note">间隔不到 48 小时</div>
+    </div>
+
+    <div class="vs">
+      <div class="vs-col brake">
+        <div class="vs-tag">周末 · 9.12 — 9.13</div>
+        <div class="vs-head">两位 CEO 公开呼吁<br>「减速发展」</div>
+        <p class="desc">Amodei 发 3800 字长文谈三步减速计划，Altman 表态愿意接受独立安全专家进驻——<b>姿态拉满</b></p>
+      </div>
+      <div class="vs-mid">VS</div>
+      <div class="vs-col gas">
+        <div class="vs-tag">周一至周三 · 9.14 — 9.16</div>
+        <div class="vs-head">两家被曝同时<br>灰度测试新模型</div>
+        <p class="desc">嘴上减速的同时，<b>新一代模型已经在内部跑起来了</b>——两家节奏惊人一致</p>
+      </div>
+    </div>
+
+    <div class="models">
+      <div class="model">
+        <div class="mn">GPT-6 Sol · OpenAI</div>
+        <p>Astra 低成本版，意在扩大 <b>200 美元/月订阅</b>的覆盖面</p>
+      </div>
+      <div class="model">
+        <div class="mo">Opus 5.2 · Anthropic</div>
+        <p>对位 Astra：<b>SVG 动画、3D 建模</b>显著增强，仅在 Claude Code 环境可见</p>
+      </div>
+    </div>
+
+    <div class="money">
+      <div class="big">63<small>亿美元/年</small></div>
+      <div class="expl">分析师解读：这是 <b>IPO 前的盈利策略</b>——把训练 GPU 转去做推理服务，OpenAI 的年化机会成本约 63 亿美元。半导体市场跟着连锁反应：<span class="chip">三星 −4.24%</span><span class="chip">SK 海力士 −7.12%</span>（9.14）</div>
+    </div>
+
+    <footer class="pagefoot">
+      <div>减速是演讲主题 · 灰度测试才是排期</div>
+      <div class="pn"><b>05</b> / 10</div>
+    </footer>
+  </div>
+</div>
+</body>
+</html>
